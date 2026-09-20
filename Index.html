@@ -6,9 +6,7 @@
   <title>Joy Peace | O-Level Computer Science</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -20,7 +18,7 @@
     header {
       background: #173b6c;
       color: white;
-      padding: 28px 20px;
+      padding: 30px 20px;
       text-align: center;
     }
 
@@ -29,20 +27,20 @@
       font-size: 32px;
     }
 
-    header p {
-      margin-top: 8px;
-    }
-
     main {
       max-width: 900px;
       margin: auto;
       padding: 20px;
     }
 
-    .welcome {
+    .welcome, .card {
       background: white;
-      padding: 22px;
+      padding: 20px;
       border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .welcome {
       margin-bottom: 20px;
     }
 
@@ -52,29 +50,18 @@
       gap: 15px;
     }
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
     .card h3 {
-      margin-top: 0;
       color: #173b6c;
+      margin-top: 0;
     }
 
-    button {
+    .button {
+      display: inline-block;
       background: #173b6c;
       color: white;
-      border: none;
-      padding: 10px 16px;
+      padding: 11px 16px;
       border-radius: 7px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #24538d;
+      text-decoration: none;
     }
 
     footer {
@@ -87,86 +74,68 @@
 
 <body>
 
-  <header>
-    <h1>Joy Peace</h1>
-    <p>Ordinary Level Computer Science</p>
-  </header>
+<header>
+  <h1>Joy Peace</h1>
+  <p>Ordinary Level Computer Science</p>
+</header>
 
-  <main>
+<main>
 
-    <section class="welcome">
-      <h2>Welcome to Joy Peace</h2>
-      <p>
-        Learn O-Level Computer Science through clear notes,
-        revision topics, practice questions and quizzes.
-      </p>
-    </section>
+  <section class="welcome">
+    <h2>Welcome to Joy Peace</h2>
+    <p>
+      Study O-Level Computer Science with lessons,
+      revision materials, quizzes and progress tracking.
+    </p>
+  </section>
 
-    <h2>Start Learning</h2>
+  <h2>Start Learning</h2>
 
-    <section class="topics">
+  <section class="topics">
 
-      <div class="card">
-        <h3>Computer Systems</h3>
-        <p>Learn about hardware, software, input, output and storage devices.</p>
-        <button onclick="alert('Lessons coming next!')">
-          Study Topic
-        </button>
-      </div>
+    <div class="card">
+      <h3>Computer Systems</h3>
+      <p>Study hardware, software, input, output and storage.</p>
+      <a class="button" href="lessons.html">Study Topic</a>
+    </div>
 
-      <div class="card">
-        <h3>Data Representation</h3>
-        <p>Study binary numbers, data units and how computers represent information.</p>
-        <button onclick="alert('Lessons coming next!')">
-          Study Topic
-        </button>
-      </div>
+    <div class="card">
+      <h3>Data Representation</h3>
+      <p>Learn binary numbers, bits, bytes and data representation.</p>
+      <a class="button" href="lessons.html">Study Topic</a>
+    </div>
 
-      <div class="card">
-        <h3>Algorithms & Programming</h3>
-        <p>Learn algorithms, flowcharts, pseudocode and programming concepts.</p>
-        <button onclick="alert('Lessons coming next!')">
-          Study Topic
-        </button>
-      </div>
+    <div class="card">
+      <h3>Algorithms & Programming</h3>
+      <p>Study algorithms, pseudocode, flowcharts and programming.</p>
+      <a class="button" href="lessons.html">Study Topic</a>
+    </div>
 
-      <div class="card">
-        <h3>Networks & Internet</h3>
-        <p>Understand computer networks, the internet and online communication.</p>
-        <a href="lessons.html">
-  <button>Study Topic</button>
-        </a>
-          Study Topic
-        </button>
-      </div>
+    <div class="card">
+      <h3>Networks & Internet</h3>
+      <p>Learn about networks, communication and the internet.</p>
+      <a class="button" href="lessons.html">Study Topic</a>
+    </div>
 
-      <div class="card">
-        <h3>Revision Quiz</h3>
-        <p>Test your knowledge with O-Level Computer Science questions.</p>
-        <a href="lessons.html">
-  <button>Study Topic</button>
-</a>
-          Start Quiz
-        </button>
-      </div>
+    <div class="card">
+      <h3>Revision Quiz</h3>
+      <p>Test your O-Level Computer Science knowledge.</p>
+      <a class="button" href="quiz.html">Start Quiz</a>
+    </div>
 
-      <div class="card">
-        <h3>My Progress</h3>
-        <p>Keep track of the topics you have studied and your quiz results.</p>
-        <a href="lessons.html">
-  <button>Study Topic</button>
-</a>
-          View Progress
-        </button>
-      </div>
+    <div class="card">
+      <h3>My Progress</h3>
+      <p>View your saved quiz score and learning progress.</p>
+      <a class="button" href="progress.html">View Progress</a>
+    </div>
 
-    </section>
+  </section>
 
-  </main>
+</main>
 
-  <footer>
-    Joy Peace • O-Level Computer Science Learning App
-  </footer>
+<footer>
+  Joy Peace • O-Level Computer Science Learning App
+</footer>
 
 </body>
-  </html>
+</html>
