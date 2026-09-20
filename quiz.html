@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz | Joy Peace</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f7fb;
+  color: #222;
+}
+
+header {
+  background: #173b6c;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.question {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+label {
+  display: block;
+  padding: 7px 0;
+}
+
+button, .home {
+  background: #173b6c;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 7px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Joy Peace</h1>
+  <p>O-Level Computer Science Quiz</p>
+</header>
+
+<main>
+
+<a class="home" href="index.html">← Home</a>
+
+<h2>Test Your Knowledge</h2>
+
+<form id="quiz">
+
+<div class="question">
+<p><strong>1. Which of these is an input device?</strong></p>
+<label><input type="radio" name="q1" value="a"> Monitor</label>
+<label><input type="radio" name="q1" value="b"> Keyboard</label>
+<label><input type="radio" name="q1" value="c"> Printer</label>
+</div>
+
+<div class="question">
+<p><strong>2. How many bits are in one byte?</strong></p>
+<label><input type="radio" name="q2" value="a"> 4</label>
+<label><input type="radio" name="q2" value="b"> 8</label>
+<label><input type="radio" name="q2" value="c"> 16</label>
+</div>
+
+<div class="question">
+<p><strong>3. What is an algorithm?</strong></p>
+<label><input type="radio" name="q3" value="a"> A sequence of steps used to solve a problem</label>
+<label><input type="radio" name="q3" value="b"> A computer monitor</label>
+<label><input type="radio" name="q3" value="c"> A storage device</label>
+</div>
+
+<div class="question">
+<p><strong>4. Which network normally covers a small area such as a school?</strong></p>
+<label><input type="radio" name="q4" value="a"> WAN</label>
+<label><input type="radio" name="q4" value="b"> LAN</label>
+<label><input type="radio" name="q4" value="c"> Internet</label>
+</div>
+
+<div class="question">
+<p><strong>5. Which of these is software?</strong></p>
+<label><input type="radio" name="q5" value="a"> Keyboard</label>
+<label><input type="radio" name="q5" value="b"> Printer</label>
+<label><input type="radio" name="q5" value="c"> Word processor</label>
+</div>
+
+<button type="button" onclick="markQuiz()">Submit Quiz</button>
+
+</form>
+
+<div id="result"></div>
+
+</main>
+
+<script>
+function markQuiz() {
+  let score = 0;
+
+  const answers = {
+    q1: "b",
+    q2: "b",
+    q3: "a",
+    q4: "b",
+    q5: "c"
+  };
+
+  for (let question in answers) {
+    const selected =
+      document.querySelector('input[name="' + question + '"]:checked');
+
+    if (selected && selected.value === answers[question]) {
+      score++;
+    }
+  }
+
+  const percentage = Math.round((score / 5) * 100);
+
+  document.getElementById("result").innerHTML =
+    "Your score: " + score + "/5 (" + percentage + "%)";
+
+  localStorage.setItem("joyPeaceQuizScore", percentage);
+}
+</script>
+
+</body>
+</html>
