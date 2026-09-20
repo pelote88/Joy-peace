@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lessons | Joy Peace</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #173b6c;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    header h1 { margin: 0; }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .lesson {
+      background: white;
+      padding: 20px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    h2, h3 { color: #173b6c; }
+
+    .example {
+      background: #eef4fc;
+      padding: 12px;
+      border-left: 4px solid #173b6c;
+      margin: 12px 0;
+    }
+
+    button, .home {
+      display: inline-block;
+      background: #173b6c;
+      color: white;
+      border: none;
+      padding: 11px 16px;
+      border-radius: 7px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: #eaf7ee;
+      border-radius: 7px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Joy Peace</h1>
+  <p>O-Level Computer Science Lessons</p>
+</header>
+
+<main>
+
+  <a class="home" href="index.html">← Home</a>
+
+  <section class="lesson">
+    <h2>1. Computer Systems</h2>
+
+    <h3>Hardware</h3>
+    <p>
+      Hardware means the physical parts of a computer that can
+      be seen and touched.
+    </p>
+
+    <div class="example">
+      Examples: keyboard, monitor, mouse, processor,
+      printer and hard disk.
+    </div>
+
+    <h3>Software</h3>
+    <p>
+      Software is a set of programs or instructions that tells
+      a computer what to do.
+    </p>
+
+    <p>
+      Software can be divided into system software and
+      application software.
+    </p>
+
+    <h3>Input Devices</h3>
+    <p>
+      Input devices are used to enter data and instructions
+      into a computer.
+    </p>
+
+    <div class="example">
+      Examples: keyboard, mouse, scanner, microphone and webcam.
+    </div>
+
+    <h3>Output Devices</h3>
+    <p>
+      Output devices present processed information to the user.
+    </p>
+
+    <div class="example">
+      Examples: monitor, printer, speakers and projector.
+    </div>
+  </section>
+
+  <section class="lesson">
+    <h2>2. Data Representation</h2>
+
+    <p>
+      Computers represent data using binary digits.
+      A binary digit is called a bit and can have the value
+      0 or 1.
+    </p>
+
+    <p>
+      Eight bits make one byte.
+    </p>
+
+    <div class="example">
+      Example: binary 1010 is equal to decimal 10.
+    </div>
+  </section>
+
+  <section class="lesson">
+    <h2>3. Algorithms</h2>
+
+    <p>
+      An algorithm is a sequence of steps used to solve
+      a problem.
+    </p>
+
+    <p>
+      Algorithms can be represented using pseudocode
+      or flowcharts.
+    </p>
+
+    <div class="example">
+      START<br>
+      INPUT length<br>
+      INPUT width<br>
+      area ← length × width<br>
+      OUTPUT area<br>
+      STOP
+    </div>
+  </section>
+
+  <section class="lesson">
+    <h2>4. Computer Networks</h2>
+
+    <p>
+      A computer network is a group of computers and other
+      devices connected so that they can communicate and
+      share resources.
+    </p>
+
+    <h3>LAN</h3>
+    <p>
+      A Local Area Network covers a relatively small
+      geographical area such as a school or office.
+    </p>
+
+    <h3>WAN</h3>
+    <p>
+      A Wide Area Network covers a large geographical area
+      and can connect computers in different cities or countries.
+    </p>
+  </section>
+
+  <section class="lesson">
+    <h2>Quick Practice</h2>
+
+    <p><strong>Question:</strong> What is hardware?</p>
+
+    <button onclick="showAnswer()">Show Answer</button>
+
+    <div id="answer" class="answer">
+      Hardware refers to the physical components of a
+      computer system that can be seen and touched.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Joy Peace • O-Level Computer Science
+</footer>
+
+<script>
+  function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+  }
+</script>
+
+</body>
+  </html>
