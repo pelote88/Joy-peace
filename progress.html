@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Progress | Joy Peace</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #173b6c;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .progress-card {
+      background: white;
+      padding: 25px;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .score {
+      font-size: 42px;
+      color: #173b6c;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .bar {
+      width: 100%;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: 0%;
+      background: #173b6c;
+      transition: width 0.5s;
+    }
+
+    .message {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #173b6c;
+      color: white;
+      padding: 11px 16px;
+      border-radius: 7px;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Joy Peace</h1>
+  <p>My Learning Progress</p>
+</header>
+
+<main>
+
+  <div class="progress-card">
+
+    <h2>Your Latest Quiz Result</h2>
+
+    <div id="score" class="score">0%</div>
+
+    <div class="bar">
+      <div id="barFill" class="bar-fill"></div>
+    </div>
+
+    <div id="message" class="message">
+      Complete the quiz to see your progress.
+    </div>
+
+    <div class="buttons">
+      <a class="button" href="quiz.html">Take Quiz</a>
+      <a class="button" href="index.html">Home</a>
+    </div>
+
+  </div>
+
+</main>
+
+<script>
+  const savedScore = localStorage.getItem("joyPeaceQuizScore");
+
+  if (savedScore !== null) {
+
+    const score = Number(savedScore);
+
+    document.getElementById("score").textContent =
+      score + "%";
+
+    document.getElementById("barFill").style.width =
+      score + "%";
+
+    let message = "";
+
+    if (score >= 80) {
+      message = "Excellent work! Keep it up.";
+    } else if (score >= 60) {
+      message = "Good work! Keep practicing.";
+    } else if (score >= 40) {
+      message = "You're making progress. Review the lessons and try again.";
+    } else {
+      message = "Keep studying. Review the lessons and try the quiz again.";
+    }
+
+    document.getElementById("message").textContent =
+      message;
+
+  }
+</script>
+
+</body>
+</html>
